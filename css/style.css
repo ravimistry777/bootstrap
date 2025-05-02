@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu' !important;
+}
+
+header .navbar-brand,
+.carousel h2,
+.offer-content h2,
+.offer-content p,
+h1,
+.about-contant h2,
+.contact-item h2 , .feedback-title h2 
+ ,  .footer-contact h5 , .footer-add h5 ,
+ .footer-time h5 {
+    font-family: 'Dancing Script';
+}
+
+header li:not(:last-child) a:hover {
+    color: #FFBE33 !important;
+}
+  
+
+.carousel {
+    background-image: url(../img/hero-bg.jpg);
+    height: 735px;
+    background-size: cover;
+    padding-top: 220px;
+    background-position: bottom;
+}
+
+.btn:hover {
+    background-color: #9a6900 !important;
+}
+
+.btn {
+    background-color: #FFBE33 !important;
+}
+
+.carousel-indicators [data-bs-target] {
+    height: 15px !important;
+    width: 15px !important;
+}
+
+.carousel-indicators .active {
+    background-color: #FFBE33 !important;
+    transform: scale(1.3) !important;
+}
+
+.carousel-indicators {
+    justify-content: inherit !important;
+    right: inherit !important;
+    left: inherit !important;
+    margin-left: 0 !important;
+    margin-bottom: 10% !important;
+}
+
+/* offers */
+
+.offer-item:hover img {
+    transform: scale(1.1);
+    transition-timing-function: ease-in;
+    transition: 0.5s;
+}
+
+/* MENU */
+
+.menu-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 230px;
+    background-color: rgb(255, 255, 2555, 0.9) !important;
+    border-bottom-left-radius: 50px;
+
+    img {
+        max-height: 145px;
+        width: auto !important;
+    }
+}
+
+.menu-item:hover img{
+    transform: scale(1.1);
+    transition: ease;
+    transition-duration: 0.8s;
+  }
+
+
+.menu-control .btn {
+    background-color:white !important;
+    color: black !important;
+}
+
+.menu-control .nav-link.active {
+    background-color: rgb(0, 0, 0, 0.8) !important;
+    border-radius: 50px !important;
+    color: white!important;
+  }
+
+.menu-control ul li button:hover {
+    color: inherit;
+}
+
+
+/* about */
+
+.about-img {
+    margin: 0px 70px 0px 70px;
+}
+
+/* feedback */
+
+.testimonial-img img {
+    position: relative;
+  }
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: black; /* arrows ka color */
+    background-size: 50% 50%;
+    border-radius: 50%;
+  }
+
+
+  .feedback-img::before{
+    content: "";
+    height: 30px;
+    width: 30px;
+    background-color: #FFBE33;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    top: 40px;
+    z-index: -1; 
+  }
+
+  .feedbacks .carousel{
+    background-image: inherit;
+    padding: 0;
+    height: inherit;
+  }
+
+  .feed-btn .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    height: 30px!important;
+    width: 30px!important;
+  }
+
+
+  /* footer */
+
+  .bloom:hover{
+    color: #FFBE33;
+  }

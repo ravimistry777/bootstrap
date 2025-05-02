@@ -1,0 +1,44 @@
+@media (min-width: 576px){
+    
+    /* abouts */
+
+    .about-img{
+        padding: 0 100px;
+    }
+
+
+}
+
+@media (min-width: 768px){
+    
+    /* abouts */
+
+    .about-img{
+        padding: 0 0 0 0;
+    }
+
+}
+
+@media (min-width: 992px){
+    
+    /* about */
+
+    .about-img{
+        padding: 0;
+    }
+
+}
+
+@media (min-width: 1200px){
+
+    /* about */
+
+    .about-img{
+        padding: 0;
+    }
+    
+}
+
+@media (min-width: 1400px){
+    
+}
