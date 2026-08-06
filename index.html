@@ -4,72 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feane</title>
+    <meta name="description" content="Feane - Fast Food Restaurant. Order delicious burgers, pizzas, pasta and fries online. Book a table today!">
+    <title>Feane - Fast Food Restaurant</title>
     <link rel="icon" href="img/favicon.png">
     <link rel="stylesheet" href="fonts/font-dancingscript/stylesheet.css" type="text/css">
     <link rel="stylesheet" href="fonts/ubuntu-font/stylesheet.css" type="text/css">
     <link rel="stylesheet" href="fonts/bt-icon/bootstrap-icons.min.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="css/media.css" type="text/css">
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <style>
-        @media (max-width: 991px) {
-          header.navbar {
-            background-color: rgba(0, 0, 0, 0.716)!important;
-          }
-        }
-        header.navbar {
-          transition: background-color 0.9s ease;
-        }
-      </style>
 </head>
 
 <body>
 
     <!-- HEADER -->
-
-    <header class="navbar navbar-expand-lg navbar-dark py-3 position-absolute top-0 start-0 end-0 z-1">
+    <header class="navbar navbar-expand-lg navbar-dark py-3 position-fixed top-0 start-0 end-0 z-3" id="mainNavbar">
         <div class="container">
 
-            <a href="javascript:void(0)" class="navbar-brand fw-bolder fs-3">Feane</a>
+            <a href="#home" class="navbar-brand fw-bolder fs-3">Feane</a>
 
-            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <nav class="collapse navbar-collapse flex-lg-grow-0" id="menu">
-
                 <ul class="navbar-nav">
                     <li>
-                        <a href="javascript:void(0)" class="nav-link me-lg-3 text-white">HOME</a>
+                        <a href="#home" class="nav-link me-lg-3 text-white nav-item-link">HOME</a>
                     </li>
                     <li>
-                        <a href="javascript:void(0)" class="nav-link me-lg-3 text-white">MENU</a>
+                        <a href="#menu-section" class="nav-link me-lg-3 text-white nav-item-link">MENU</a>
                     </li>
                     <li>
-                        <a href="javascript:void(0)" class="nav-link me-lg-3 text-white">ABOUT</a>
+                        <a href="#about" class="nav-link me-lg-3 text-white nav-item-link">ABOUT</a>
                     </li>
                     <li>
-                        <a href="javascript:void(0)" class="nav-link me-lg-5 text-white">BOOK TABLE</a>
+                        <a href="#contact" class="nav-link me-lg-5 text-white nav-item-link">BOOK TABLE</a>
                     </li>
 
                     <li class="d-none d-lg-block">
-                        <a href="javascript:void(0)" class="nav-link ms-lg-5 text-white">
-                            <i class="bi bi-person-fill"></i></a>
+                        <a href="#" class="nav-link ms-lg-5 text-white" title="Login">
+                            <i class="bi bi-person-fill"></i>
+                        </a>
                     </li>
                     <li class="d-none d-lg-block">
-                        <a href="javascript:void(0)" class="nav-link text-white">
+                        <a href="#" class="nav-link text-white" title="Cart">
                             <i class="bi bi-cart-fill"></i>
                         </a>
                     </li>
                     <li class="d-none d-lg-block">
-                        <a href="javascript:void(0)" class="nav-link text-white">
+                        <a href="#" class="nav-link text-white" title="Search">
                             <i class="bi bi-search"></i>
                         </a>
                     </li>
                     <li class="d-none d-lg-block">
-                        <a href="javascript:void(0)" class="nav-link px-3 rounded-pill bg-warning text-white">Order
-                            Online</a>
+                        <a href="#menu-section" class="nav-link px-3 rounded-pill order-btn text-dark fw-bold">Order Online</a>
                     </li>
                 </ul>
             </nav>
@@ -78,166 +67,123 @@
 
 
     <main>
-        <!-- SLIDER -->
 
-        <div id="carouselExampleIndicators" class="carousel slide">
+        <!-- HERO SLIDER -->
+        <section id="home">
+            <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
 
-            <div class="container">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                        class="active rounded-circle"></button>
-                    <button type="button" class="rounded-circle mx-1" data-bs-target="#carouselExampleIndicators"
-                        data-bs-slide-to="1"></button>
-                    <button type="button" class="rounded-circle" data-bs-target="#carouselExampleIndicators"
-                        data-bs-slide-to="2"></button>
-                </div>
-            </div>
-
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="container">
-                        <div class="col-md-6">
-                            <h2 class="text-white display-5 fw-bolder">Fast Food Restaurant</h2>
-                            <p class="text-white py-3">Doloremque, itaque aperiam facilis rerum, commodi, temporibus
-                                sapiente ad mollitia
-                                laborum quam quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat
-                                dolore, iste magni quos nihil ducimus libero ipsam.</p>
-                            <a href="javascript:void(0)"
-                                class="btn text-decoration-none px-4 py-2 rounded-pill text-white">Order
-                                Now</a>
-                        </div>
+                <div class="container">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active rounded-circle" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" class="rounded-circle mx-1" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" class="rounded-circle" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
                     </div>
                 </div>
 
-                <div class="carousel-item">
-                    <div class="container">
-                        <div class="col-md-6">
-                            <h2 class="text-white display-5 fw-bolder">Fast Food Restaurant</h2>
-                            <p class="text-white py-3">Doloremque, itaque aperiam facilis rerum, commodi, temporibus
-                                sapiente ad mollitia
-                                laborum quam quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat
-                                dolore, iste magni quos nihil ducimus libero ipsam.</p>
-                            <a href="javascript:void(0)"
-                                class="btn text-decoration-none px-4 py-2 rounded-pill text-white">Order
-                                Now</a>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="container hero-content">
+                            <div class="col-md-7 col-lg-6">
+                                <span class="hero-badge">🍕 Special Offer Today</span>
+                                <h1 class="text-white display-4 fw-bolder mt-3">Fast Food <span class="text-warning">Restaurant</span></h1>
+                                <p class="text-white py-3 lead">Experience the finest fast food in town. From crispy fries to mouthwatering pizzas — every bite is crafted with love and the freshest ingredients.</p>
+                                <a href="#menu-section" class="btn-primary-custom me-3">Order Now</a>
+                                <a href="#contact" class="btn-outline-custom">Book a Table</a>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="carousel-item">
-                    <div class="container">
-                        <div class="col-md-6">
-                            <h2 class="text-white display-5 fw-bolder">Fast Food Restaurant</h2>
-                            <p class="text-white py-3">Doloremque, itaque aperiam facilis rerum, commodi, temporibus
-                                sapiente ad mollitia
-                                laborum quam quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat
-                                dolore, iste magni quos nihil ducimus libero ipsam.</p>
-                            <a href="javascript:void(0)"
-                                class="btn text-decoration-none px-4 py-2 rounded-pill text-white">Order
-                                Now</a>
+                    <div class="carousel-item">
+                        <div class="container hero-content">
+                            <div class="col-md-7 col-lg-6">
+                                <span class="hero-badge">🍔 Freshly Made Daily</span>
+                                <h1 class="text-white display-4 fw-bolder mt-3">Juicy Burgers <span class="text-warning">& More</span></h1>
+                                <p class="text-white py-3 lead">Hand-crafted burgers loaded with flavor. Choose from our wide variety of stacked burgers, perfectly seasoned and grilled to perfection.</p>
+                                <a href="#menu-section" class="btn-primary-custom me-3">Order Now</a>
+                                <a href="#contact" class="btn-outline-custom">Book a Table</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="container hero-content">
+                            <div class="col-md-7 col-lg-6">
+                                <span class="hero-badge">🍝 Italian Classics</span>
+                                <h1 class="text-white display-4 fw-bolder mt-3">Authentic <span class="text-warning">Pasta</span></h1>
+                                <p class="text-white py-3 lead">Indulge in our creamy, rich pasta dishes made from authentic Italian recipes. A taste of Italy, right here in your city.</p>
+                                <a href="#menu-section" class="btn-primary-custom me-3">Order Now</a>
+                                <a href="#contact" class="btn-outline-custom">Book a Table</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
         <!-- OFFERS -->
-
         <section class="offers py-5">
             <div class="container">
-                <div class="row">
+                <div class="row g-4">
                     <div class="col-md-6">
-                        <div class="offer-item bg-dark rounded p-4 d-flex align-items-center">
-
-                            <img class="rounded-circle border border-warning border-5" src="img/offer-1.jpg"
-                                type="offer-1" alt="offer-1" width="150px" />
-
-                            <div class="offer-content mx-3">
-                                <ul class="list-unstyled">
-                                    <li>
-                                        <h2 class="text-white">Tasty Thursdays</h2>
-                                    </li>
-                                    <li>
-                                        <p class="text-white fs-2">20% Off</p>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)"
-                                            class="btn text-decoration-none px-4 py-2 rounded-pill text-white">Order
-                                            Now
-                                            <i class="bi bi-cart-fill"></i>
-                                        </a>
-                                    </li>
-                                </ul>
+                        <div class="offer-item bg-dark rounded-4 p-4 d-flex align-items-center h-100">
+                            <img class="rounded-circle border border-warning border-5 offer-img" src="img/offer-1.jpg" alt="Tasty Thursdays offer" width="130" height="130">
+                            <div class="offer-content ms-4">
+                                <h2 class="text-white mb-1">Tasty Thursdays</h2>
+                                <p class="text-warning fw-bold fs-2 mb-2">20% Off</p>
+                                <a href="#menu-section" class="btn-primary-custom btn-sm-custom">
+                                    Order Now <i class="bi bi-cart-fill ms-1"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-md-6">
-                        <div class="offer-item bg-dark rounded p-4 d-flex align-items-center mt-3 mt-md-0">
-
-                            <img class="rounded-circle border border-warning border-5" src="img/offer-2.jpg"
-                                type="offer-1" alt="offer-1" width="150" />
-
-                            <div class="offer-content mx-3">
-                                <ul class="list-unstyled">
-                                    <li>
-                                        <h2 class="text-white">Pizza Days
-                                        </h2>
-                                    </li>
-                                    <li>
-                                        <p class="text-white fs-2">15% Off</p>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)"
-                                            class="btn text-decoration-none px-4 py-2 rounded-pill text-white">Order
-                                            Now
-                                            <i class="bi bi-cart-fill"></i>
-                                        </a>
-                                    </li>
-                                </ul>
+                        <div class="offer-item bg-dark rounded-4 p-4 d-flex align-items-center h-100">
+                            <img class="rounded-circle border border-warning border-5 offer-img" src="img/offer-2.jpg" alt="Pizza Days offer" width="130" height="130">
+                            <div class="offer-content ms-4">
+                                <h2 class="text-white mb-1">Pizza Days</h2>
+                                <p class="text-warning fw-bold fs-2 mb-2">15% Off</p>
+                                <a href="#menu-section" class="btn-primary-custom btn-sm-custom">
+                                    Order Now <i class="bi bi-cart-fill ms-1"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
 
         <!-- MENU -->
-
-        <section class="menu py-5">
+        <section class="menu-section py-5" id="menu-section">
             <div class="container">
 
                 <!-- Title -->
-                <div class="row mb-4">
+                <div class="row mb-2">
                     <div class="col text-center">
-                        <h1 class="fs-1 fw-bold">Our Menu</h1>
+                        <p class="section-label">WHAT WE OFFER</p>
+                        <h2 class="section-title fw-bold">Our Menu</h2>
+                        <p class="section-desc">Fresh ingredients, bold flavors — handcrafted for every taste.</p>
                     </div>
                 </div>
 
                 <!-- Tabs -->
                 <div class="row mb-4">
                     <div class="menu-control col d-flex justify-content-center">
-                        <ul class="nav nav-tabs" id="menuTabs">
+                        <ul class="nav" id="menuTabs" role="tablist">
                             <li class="nav-item">
-                                <button class="nav-link active btn rounded-pill" id="all-tab" data-bs-toggle="tab"
-                                    data-bs-target="#all">All</button>
+                                <button class="menu-tab-btn active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all" role="tab" aria-controls="all" aria-selected="true">All</button>
                             </li>
                             <li class="nav-item">
-                                <button class="nav-link rounded-pill btn mx-2" id="burger-tab" data-bs-toggle="tab"
-                                    data-bs-target="#burger">Burger</button>
+                                <button class="menu-tab-btn" id="burger-tab" data-bs-toggle="tab" data-bs-target="#burger" role="tab" aria-controls="burger" aria-selected="false">Burger</button>
                             </li>
                             <li class="nav-item">
-                                <button class="nav-link rounded-pill btn" id="pizza-tab" data-bs-toggle="tab"
-                                    data-bs-target="#pizza">Pizza</button>
+                                <button class="menu-tab-btn" id="pizza-tab" data-bs-toggle="tab" data-bs-target="#pizza" role="tab" aria-controls="pizza" aria-selected="false">Pizza</button>
                             </li>
                             <li class="nav-item">
-                                <button class="nav-link rounded-pill btn mx-2" id="pasta-tab" data-bs-toggle="tab"
-                                    data-bs-target="#pasta">Pasta</button>
+                                <button class="menu-tab-btn" id="pasta-tab" data-bs-toggle="tab" data-bs-target="#pasta" role="tab" aria-controls="pasta" aria-selected="false">Pasta</button>
                             </li>
                             <li class="nav-item">
-                                <button class="nav-link rounded-pill btn" id="fries-tab" data-bs-toggle="tab"
-                                    data-bs-target="#fries">Fries</button>
+                                <button class="menu-tab-btn" id="fries-tab" data-bs-toggle="tab" data-bs-target="#fries" role="tab" aria-controls="fries" aria-selected="false">Fries</button>
                             </li>
                         </ul>
                     </div>
@@ -247,338 +193,252 @@
                 <div class="tab-content" id="menuTabsContent">
 
                     <!-- All -->
-                    <div class="tab-pane fade show active" id="all">
-                        <div class="row">
+                    <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab" tabindex="0">
+                        <div class="row g-4">
 
-                            <div class="col-12 col-sm-6 col-lg-4 mb-4">
-                                <div class="menu-item bg-dark rounded rounded-4 h-100 d-flex flex-column">
-                                    <div
-                                        class="menu-img bg-light rounded-top text-center d-flex justify-content-center align-items-center pt-3">
-                                        <img src="img/menu-img1.png" alt="Pizza" width="200px" />
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="menu-item bg-dark rounded-4 h-100 d-flex flex-column">
+                                    <div class="menu-img rounded-top-4">
+                                        <img src="img/menu-img1.png" alt="Delicious Pizza">
                                     </div>
-                                    <div
-                                        class="menu-content p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                    <div class="menu-content p-4 flex-grow-1 d-flex flex-column justify-content-between">
                                         <div>
-                                            <h5 class="text-white">Delicious Pizza</h5>
-                                            <p class="text-white">
-                                                Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit,
-                                                magnam voluptatem repellendus sed eaque
-                                            </p>
+                                            <h5 class="text-white fw-bold">Delicious Pizza</h5>
+                                            <p class="text-white-50">Classic Italian style pizza with rich tomato sauce and fresh mozzarella, baked to golden perfection.</p>
                                         </div>
-                                        <ul
-                                            class="list-unstyled d-flex justify-content-between align-items-center mb-0 mt-3">
-                                            <li class="text-white">$20</li>
-                                            <li>
-                                                <button class="btn btn-warning rounded-circle">
-                                                    <i class="bi bi-cart-fill"></i>
-                                            </li>
-                                        </ul>
+                                        <div class="d-flex justify-content-between align-items-center mt-3">
+                                            <span class="text-warning fs-5 fw-bold">$20</span>
+                                            <button class="btn-cart" aria-label="Add to cart">
+                                                <i class="bi bi-cart-fill"></i>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-12 col-sm-6 col-lg-4 mb-4">
-                                <div class="menu-item bg-dark rounded rounded-4 h-100 d-flex flex-column">
-                                    <div
-                                        class="menu-img bg-light rounded-top text-center d-flex justify-content-center align-items-center pt-3">
-                                        <img src="img/menu-img2.png" alt="Burger" width="200px" />
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="menu-item bg-dark rounded-4 h-100 d-flex flex-column">
+                                    <div class="menu-img rounded-top-4">
+                                        <img src="img/menu-img2.png" alt="Delicious Burger">
                                     </div>
-                                    <div
-                                        class="menu-content p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                    <div class="menu-content p-4 flex-grow-1 d-flex flex-column justify-content-between">
                                         <div>
-                                            <h5 class="text-white">Delicious Burger</h5>
-                                            <p class="text-white">
-                                                Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit,
-                                                magnam voluptatem repellendus sed eaque
-                                            </p>
+                                            <h5 class="text-white fw-bold">Delicious Burger</h5>
+                                            <p class="text-white-50">Juicy beef patty stacked with crispy lettuce, fresh tomatoes, and our signature sauce in a toasted bun.</p>
                                         </div>
-                                        <ul
-                                            class="list-unstyled d-flex justify-content-between align-items-center mb-0 mt-3">
-                                            <li class="text-white">$15</li>
-                                            <li>
-                                                <button class="btn btn-warning rounded-circle">
-                                                    <i class="bi bi-cart-fill"></i>
-                                            </li>
-                                        </ul>
+                                        <div class="d-flex justify-content-between align-items-center mt-3">
+                                            <span class="text-warning fs-5 fw-bold">$15</span>
+                                            <button class="btn-cart" aria-label="Add to cart">
+                                                <i class="bi bi-cart-fill"></i>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-12 col-sm-6 col-lg-4 mb-4">
-                                <div class="menu-item bg-dark rounded rounded-4 h-100 d-flex flex-column">
-                                    <div
-                                        class="menu-img bg-light rounded-top text-center d-flex justify-content-center align-items-center pt-3">
-                                        <img src="img/menu-img3.png" alt="Pizza" width="200px" />
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="menu-item bg-dark rounded-4 h-100 d-flex flex-column">
+                                    <div class="menu-img rounded-top-4">
+                                        <img src="img/menu-img3.png" alt="Spicy Pizza">
                                     </div>
-                                    <div
-                                        class="menu-content p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                    <div class="menu-content p-4 flex-grow-1 d-flex flex-column justify-content-between">
                                         <div>
-                                            <h5 class="text-white">Delicious Pizza</h5>
-                                            <p class="text-white">
-                                                Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit,
-                                                magnam voluptatem repellendus sed eaque
-                                            </p>
+                                            <h5 class="text-white fw-bold">Spicy Pizza</h5>
+                                            <p class="text-white-50">A fiery twist on the classic pizza with jalapeños, chili flakes, and bold spices that pack a punch.</p>
                                         </div>
-                                        <ul
-                                            class="list-unstyled d-flex justify-content-between align-items-center mb-0 mt-3">
-                                            <li class="text-white">$17</li>
-                                            <li>
-                                                <button class="btn btn-warning rounded-circle">
-                                                    <i class="bi bi-cart-fill"></i>
-                                            </li>
-                                        </ul>
+                                        <div class="d-flex justify-content-between align-items-center mt-3">
+                                            <span class="text-warning fs-5 fw-bold">$17</span>
+                                            <button class="btn-cart" aria-label="Add to cart">
+                                                <i class="bi bi-cart-fill"></i>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-12 col-sm-6 col-lg-4 mb-4">
-                                <div class="menu-item bg-dark rounded rounded-4 h-100 d-flex flex-column">
-                                    <div
-                                        class="menu-img bg-light rounded-top text-center d-flex justify-content-center align-items-center pt-3">
-                                        <img src="img/menu-img4.png" alt="Pasta" width="200px" />
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="menu-item bg-dark rounded-4 h-100 d-flex flex-column">
+                                    <div class="menu-img rounded-top-4">
+                                        <img src="img/menu-img4.png" alt="Delicious Pasta">
                                     </div>
-                                    <div
-                                        class="menu-content p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                    <div class="menu-content p-4 flex-grow-1 d-flex flex-column justify-content-between">
                                         <div>
-                                            <h5 class="text-white">Delicious Pasta</h5>
-                                            <p class="text-white">
-                                                Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit,
-                                                magnam voluptatem repellendus sed eaque
-                                            </p>
+                                            <h5 class="text-white fw-bold">Delicious Pasta</h5>
+                                            <p class="text-white-50">Creamy Alfredo pasta with herbs and a touch of garlic, served al dente just the way Italians love it.</p>
                                         </div>
-                                        <ul
-                                            class="list-unstyled d-flex justify-content-between align-items-center mb-0 mt-3">
-                                            <li class="text-white">$18</li>
-                                            <li>
-                                                <button class="btn btn-warning rounded-circle">
-                                                    <i class="bi bi-cart-fill"></i>
-                                            </li>
-                                        </ul>
+                                        <div class="d-flex justify-content-between align-items-center mt-3">
+                                            <span class="text-warning fs-5 fw-bold">$18</span>
+                                            <button class="btn-cart" aria-label="Add to cart">
+                                                <i class="bi bi-cart-fill"></i>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-12 col-sm-6 col-lg-4 mb-4">
-                                <div class="menu-item bg-dark rounded rounded-4 h-100 d-flex flex-column">
-                                    <div
-                                        class="menu-img bg-light rounded-top text-center d-flex justify-content-center align-items-center pt-3">
-                                        <img src="img/menu-img5.png" alt="fries" width="200px" />
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="menu-item bg-dark rounded-4 h-100 d-flex flex-column">
+                                    <div class="menu-img rounded-top-4">
+                                        <img src="img/menu-img5.png" alt="French Fries">
                                     </div>
-                                    <div
-                                        class="menu-content p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                    <div class="menu-content p-4 flex-grow-1 d-flex flex-column justify-content-between">
                                         <div>
-                                            <h5 class="text-white">French Fries</h5>
-                                            <p class="text-white">
-                                                Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit,
-                                                magnam voluptatem repellendus sed eaque
-                                            </p>
+                                            <h5 class="text-white fw-bold">French Fries</h5>
+                                            <p class="text-white-50">Golden, crispy fries seasoned with sea salt and herbs. The perfect snack or side for any meal.</p>
                                         </div>
-                                        <ul
-                                            class="list-unstyled d-flex justify-content-between align-items-center mb-0 mt-3">
-                                            <li class="text-white">$10</li>
-                                            <li>
-                                                <button class="btn btn-warning rounded-circle">
-                                                    <i class="bi bi-cart-fill"></i>
-                                            </li>
-                                        </ul>
+                                        <div class="d-flex justify-content-between align-items-center mt-3">
+                                            <span class="text-warning fs-5 fw-bold">$10</span>
+                                            <button class="btn-cart" aria-label="Add to cart">
+                                                <i class="bi bi-cart-fill"></i>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-12 col-sm-6 col-lg-4 mb-4">
-                                <div class="menu-item bg-dark rounded rounded-4 h-100 d-flex flex-column">
-                                    <div
-                                        class="menu-img bg-light rounded-top text-center d-flex justify-content-center align-items-center pt-3">
-                                        <img src="img/menu-img6.png" alt="Pizza" width="200px" />
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="menu-item bg-dark rounded-4 h-100 d-flex flex-column">
+                                    <div class="menu-img rounded-top-4">
+                                        <img src="img/menu-img6.png" alt="BBQ Pizza">
                                     </div>
-                                    <div
-                                        class="menu-content p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                    <div class="menu-content p-4 flex-grow-1 d-flex flex-column justify-content-between">
                                         <div>
-                                            <h5 class="text-white">Delicious Pizza</h5>
-                                            <p class="text-white">
-                                                Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit,
-                                                magnam voluptatem repellendus sed eaque
-                                            </p>
+                                            <h5 class="text-white fw-bold">BBQ Pizza</h5>
+                                            <p class="text-white-50">Smoky BBQ sauce base topped with grilled chicken, onions, and bell peppers on a hand-tossed crust.</p>
                                         </div>
-                                        <ul
-                                            class="list-unstyled d-flex justify-content-between align-items-center mb-0 mt-3">
-                                            <li class="text-white">$15</li>
-                                            <li>
-                                                <button class="btn btn-warning rounded-circle">
-                                                    <i class="bi bi-cart-fill"></i>
-                                            </li>
-                                        </ul>
+                                        <div class="d-flex justify-content-between align-items-center mt-3">
+                                            <span class="text-warning fs-5 fw-bold">$15</span>
+                                            <button class="btn-cart" aria-label="Add to cart">
+                                                <i class="bi bi-cart-fill"></i>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-12 col-sm-6 col-lg-4 mb-4">
-                                <div class="menu-item bg-dark rounded rounded-4 h-100 d-flex flex-column">
-                                    <div
-                                        class="menu-img bg-light rounded-top text-center d-flex justify-content-center align-items-center pt-3">
-                                        <img src="img/menu-img7.png" alt="Pizza" width="200px" />
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="menu-item bg-dark rounded-4 h-100 d-flex flex-column">
+                                    <div class="menu-img rounded-top-4">
+                                        <img src="img/menu-img7.png" alt="Tasty Burger">
                                     </div>
-                                    <div
-                                        class="menu-content p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                    <div class="menu-content p-4 flex-grow-1 d-flex flex-column justify-content-between">
                                         <div>
-                                            <h5 class="text-white">Tasty Burger</h5>
-                                            <p class="text-white">
-                                                Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit,
-                                                magnam voluptatem repellendus sed eaque
-                                            </p>
+                                            <h5 class="text-white fw-bold">Tasty Burger</h5>
+                                            <p class="text-white-50">Double-stacked beef patties with cheddar cheese, pickles, and caramelized onions in a brioche bun.</p>
                                         </div>
-                                        <ul
-                                            class="list-unstyled d-flex justify-content-between align-items-center mb-0 mt-3">
-                                            <li class="text-white">$12</li>
-                                            <li>
-                                                <button class="btn btn-warning rounded-circle">
-                                                    <i class="bi bi-cart-fill"></i>
-                                            </li>
-                                        </ul>
+                                        <div class="d-flex justify-content-between align-items-center mt-3">
+                                            <span class="text-warning fs-5 fw-bold">$12</span>
+                                            <button class="btn-cart" aria-label="Add to cart">
+                                                <i class="bi bi-cart-fill"></i>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-12 col-sm-6 col-lg-4 mb-4">
-                                <div class="menu-item bg-dark rounded rounded-4 h-100 d-flex flex-column">
-                                    <div
-                                        class="menu-img bg-light rounded-top text-center d-flex justify-content-center align-items-center pt-3">
-                                        <img src="img/menu-img8.png" alt="Pizza" width="200px" />
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="menu-item bg-dark rounded-4 h-100 d-flex flex-column">
+                                    <div class="menu-img rounded-top-4">
+                                        <img src="img/menu-img8.png" alt="Cheese Burger">
                                     </div>
-                                    <div
-                                        class="menu-content p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                    <div class="menu-content p-4 flex-grow-1 d-flex flex-column justify-content-between">
                                         <div>
-                                            <h5 class="text-white">Tasty Burger</h5>
-                                            <p class="text-white">
-                                                Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit,
-                                                magnam voluptatem repellendus sed eaque
-                                            </p>
+                                            <h5 class="text-white fw-bold">Cheese Burger</h5>
+                                            <p class="text-white-50">A classic cheeseburger loaded with melted American cheese, mustard, ketchup, and fresh veggies.</p>
                                         </div>
-                                        <ul
-                                            class="list-unstyled d-flex justify-content-between align-items-center mb-0 mt-3">
-                                            <li class="text-white">$14</li>
-                                            <li>
-                                                <button class="btn btn-warning rounded-circle">
-                                                    <i class="bi bi-cart-fill"></i>
-                                            </li>
-                                        </ul>
+                                        <div class="d-flex justify-content-between align-items-center mt-3">
+                                            <span class="text-warning fs-5 fw-bold">$14</span>
+                                            <button class="btn-cart" aria-label="Add to cart">
+                                                <i class="bi bi-cart-fill"></i>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-12 col-sm-6 col-lg-4 mb-4">
-                                <div class="menu-item bg-dark rounded rounded-4 h-100 d-flex flex-column">
-                                    <div
-                                        class="menu-img bg-light rounded-top text-center d-flex justify-content-center align-items-center pt-3">
-                                        <img src="img/menu-img9.png" alt="pasta" width="200px" />
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="menu-item bg-dark rounded-4 h-100 d-flex flex-column">
+                                    <div class="menu-img rounded-top-4">
+                                        <img src="img/menu-img9.png" alt="Penne Pasta">
                                     </div>
-                                    <div
-                                        class="menu-content p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                    <div class="menu-content p-4 flex-grow-1 d-flex flex-column justify-content-between">
                                         <div>
-                                            <h5 class="text-white">Delicious Pasta</h5>
-                                            <p class="text-white">
-                                                Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit,
-                                                magnam voluptatem repellendus sed eaque
-                                            </p>
+                                            <h5 class="text-white fw-bold">Penne Pasta</h5>
+                                            <p class="text-white-50">Penne pasta tossed in a rich tomato arrabbiata sauce with fresh basil, olives, and Parmesan cheese.</p>
                                         </div>
-                                        <ul
-                                            class="list-unstyled d-flex justify-content-between align-items-center mb-0 mt-3">
-                                            <li class="text-white">$10</li>
-                                            <li>
-                                                <button class="btn btn-warning rounded-circle">
-                                                    <i class="bi bi-cart-fill"></i>
-                                            </li>
-                                        </ul>
+                                        <div class="d-flex justify-content-between align-items-center mt-3">
+                                            <span class="text-warning fs-5 fw-bold">$10</span>
+                                            <button class="btn-cart" aria-label="Add to cart">
+                                                <i class="bi bi-cart-fill"></i>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-
-
 
                         </div>
                     </div>
 
                     <!-- Burger -->
                     <div class="tab-pane fade" id="burger" role="tabpanel" aria-labelledby="burger-tab" tabindex="0">
-                        <div class="row">
+                        <div class="row g-4">
 
-                            <div class="col-12 col-sm-6 col-lg-4 mb-4">
-                                <div class="menu-item bg-dark rounded rounded-4 h-100 d-flex flex-column">
-                                    <div
-                                        class="menu-img bg-light rounded-top text-center d-flex justify-content-center align-items-center pt-3">
-                                        <img src="img/menu-img2.png" alt="Burger" width="200px" />
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="menu-item bg-dark rounded-4 h-100 d-flex flex-column">
+                                    <div class="menu-img rounded-top-4">
+                                        <img src="img/menu-img2.png" alt="Delicious Burger">
                                     </div>
-                                    <div
-                                        class="menu-content p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                    <div class="menu-content p-4 flex-grow-1 d-flex flex-column justify-content-between">
                                         <div>
-                                            <h5 class="text-white">Delicious Burger</h5>
-                                            <p class="text-white">
-                                                Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit,
-                                                magnam voluptatem repellendus sed eaque
-                                            </p>
+                                            <h5 class="text-white fw-bold">Delicious Burger</h5>
+                                            <p class="text-white-50">Juicy beef patty stacked with crispy lettuce, fresh tomatoes, and our signature sauce in a toasted bun.</p>
                                         </div>
-                                        <ul
-                                            class="list-unstyled d-flex justify-content-between align-items-center mb-0 mt-3">
-                                            <li class="text-white">$15</li>
-                                            <li>
-                                                <button class="btn btn-warning rounded-circle">
-                                                    <i class="bi bi-cart-fill"></i>
-                                            </li>
-                                        </ul>
+                                        <div class="d-flex justify-content-between align-items-center mt-3">
+                                            <span class="text-warning fs-5 fw-bold">$15</span>
+                                            <button class="btn-cart" aria-label="Add to cart">
+                                                <i class="bi bi-cart-fill"></i>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-12 col-sm-6 col-lg-4 mb-4">
-                                <div class="menu-item bg-dark rounded rounded-4 h-100 d-flex flex-column">
-                                    <div
-                                        class="menu-img bg-light rounded-top text-center d-flex justify-content-center align-items-center pt-3">
-                                        <img src="img/menu-img7.png" alt="Pizza" width="200px" />
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="menu-item bg-dark rounded-4 h-100 d-flex flex-column">
+                                    <div class="menu-img rounded-top-4">
+                                        <img src="img/menu-img7.png" alt="Tasty Burger">
                                     </div>
-                                    <div
-                                        class="menu-content p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                    <div class="menu-content p-4 flex-grow-1 d-flex flex-column justify-content-between">
                                         <div>
-                                            <h5 class="text-white">Tasty Burger</h5>
-                                            <p class="text-white">
-                                                Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit,
-                                                magnam voluptatem repellendus sed eaque
-                                            </p>
+                                            <h5 class="text-white fw-bold">Tasty Burger</h5>
+                                            <p class="text-white-50">Double-stacked beef patties with cheddar cheese, pickles, and caramelized onions in a brioche bun.</p>
                                         </div>
-                                        <ul
-                                            class="list-unstyled d-flex justify-content-between align-items-center mb-0 mt-3">
-                                            <li class="text-white">$12</li>
-                                            <li>
-                                                <button class="btn btn-warning rounded-circle">
-                                                    <i class="bi bi-cart-fill"></i>
-                                            </li>
-                                        </ul>
+                                        <div class="d-flex justify-content-between align-items-center mt-3">
+                                            <span class="text-warning fs-5 fw-bold">$12</span>
+                                            <button class="btn-cart" aria-label="Add to cart">
+                                                <i class="bi bi-cart-fill"></i>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-12 col-sm-6 col-lg-4 mb-4">
-                                <div class="menu-item bg-dark rounded rounded-4 h-100 d-flex flex-column">
-                                    <div
-                                        class="menu-img bg-light rounded-top text-center d-flex justify-content-center align-items-center pt-3">
-                                        <img src="img/menu-img8.png" alt="Pizza" width="200px" />
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="menu-item bg-dark rounded-4 h-100 d-flex flex-column">
+                                    <div class="menu-img rounded-top-4">
+                                        <img src="img/menu-img8.png" alt="Cheese Burger">
                                     </div>
-                                    <div
-                                        class="menu-content p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                    <div class="menu-content p-4 flex-grow-1 d-flex flex-column justify-content-between">
                                         <div>
-                                            <h5 class="text-white">Tasty Burger</h5>
-                                            <p class="text-white">
-                                                Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit,
-                                                magnam voluptatem repellendus sed eaque
-                                            </p>
+                                            <h5 class="text-white fw-bold">Cheese Burger</h5>
+                                            <p class="text-white-50">A classic cheeseburger loaded with melted American cheese, mustard, ketchup, and fresh veggies.</p>
                                         </div>
-                                        <ul
-                                            class="list-unstyled d-flex justify-content-between align-items-center mb-0 mt-3">
-                                            <li class="text-white">$14</li>
-                                            <li>
-                                                <button class="btn btn-warning rounded-circle">
-                                                    <i class="bi bi-cart-fill"></i>
-                                            </li>
-                                        </ul>
+                                        <div class="d-flex justify-content-between align-items-center mt-3">
+                                            <span class="text-warning fs-5 fw-bold">$14</span>
+                                            <button class="btn-cart" aria-label="Add to cart">
+                                                <i class="bi bi-cart-fill"></i>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -588,85 +448,64 @@
 
                     <!-- Pizza -->
                     <div class="tab-pane fade" id="pizza" role="tabpanel" aria-labelledby="pizza-tab" tabindex="0">
-                        <div class="row">
+                        <div class="row g-4">
 
-                            <div class="col-12 col-sm-6 col-lg-4 mb-4">
-                                <div class="menu-item bg-dark rounded rounded-4 h-100 d-flex flex-column">
-                                    <div
-                                        class="menu-img bg-light rounded-top text-center d-flex justify-content-center align-items-center pt-3">
-                                        <img src="img/menu-img1.png" alt="Pizza" width="200px" />
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="menu-item bg-dark rounded-4 h-100 d-flex flex-column">
+                                    <div class="menu-img rounded-top-4">
+                                        <img src="img/menu-img1.png" alt="Delicious Pizza">
                                     </div>
-                                    <div
-                                        class="menu-content p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                    <div class="menu-content p-4 flex-grow-1 d-flex flex-column justify-content-between">
                                         <div>
-                                            <h5 class="text-white">Delicious Pizza</h5>
-                                            <p class="text-white">
-                                                Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit,
-                                                magnam voluptatem repellendus sed eaque
-                                            </p>
+                                            <h5 class="text-white fw-bold">Delicious Pizza</h5>
+                                            <p class="text-white-50">Classic Italian style pizza with rich tomato sauce and fresh mozzarella, baked to golden perfection.</p>
                                         </div>
-                                        <ul
-                                            class="list-unstyled d-flex justify-content-between align-items-center mb-0 mt-3">
-                                            <li class="text-white">$20</li>
-                                            <li>
-                                                <button class="btn btn-warning rounded-circle">
-                                                    <i class="bi bi-cart-fill"></i>
-                                            </li>
-                                        </ul>
+                                        <div class="d-flex justify-content-between align-items-center mt-3">
+                                            <span class="text-warning fs-5 fw-bold">$20</span>
+                                            <button class="btn-cart" aria-label="Add to cart">
+                                                <i class="bi bi-cart-fill"></i>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-12 col-sm-6 col-lg-4 mb-4">
-                                <div class="menu-item bg-dark rounded rounded-4 h-100 d-flex flex-column">
-                                    <div
-                                        class="menu-img bg-light rounded-top text-center d-flex justify-content-center align-items-center pt-3">
-                                        <img src="img/menu-img3.png" alt="Pizza" width="200px" />
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="menu-item bg-dark rounded-4 h-100 d-flex flex-column">
+                                    <div class="menu-img rounded-top-4">
+                                        <img src="img/menu-img3.png" alt="Spicy Pizza">
                                     </div>
-                                    <div
-                                        class="menu-content p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                    <div class="menu-content p-4 flex-grow-1 d-flex flex-column justify-content-between">
                                         <div>
-                                            <h5 class="text-white">Delicious Pizza</h5>
-                                            <p class="text-white">
-                                                Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit,
-                                                magnam voluptatem repellendus sed eaque
-                                            </p>
+                                            <h5 class="text-white fw-bold">Spicy Pizza</h5>
+                                            <p class="text-white-50">A fiery twist on the classic pizza with jalapeños, chili flakes, and bold spices that pack a punch.</p>
                                         </div>
-                                        <ul
-                                            class="list-unstyled d-flex justify-content-between align-items-center mb-0 mt-3">
-                                            <li class="text-white">$17</li>
-                                            <li>
-                                                <button class="btn btn-warning rounded-circle">
-                                                    <i class="bi bi-cart-fill"></i>
-                                            </li>
-                                        </ul>
+                                        <div class="d-flex justify-content-between align-items-center mt-3">
+                                            <span class="text-warning fs-5 fw-bold">$17</span>
+                                            <button class="btn-cart" aria-label="Add to cart">
+                                                <i class="bi bi-cart-fill"></i>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-12 col-sm-6 col-lg-4 mb-4">
-                                <div class="menu-item bg-dark rounded rounded-4 h-100 d-flex flex-column">
-                                    <div
-                                        class="menu-img bg-light rounded-top text-center d-flex justify-content-center align-items-center pt-3">
-                                        <img src="img/menu-img6.png" alt="Pizza" width="200px" />
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="menu-item bg-dark rounded-4 h-100 d-flex flex-column">
+                                    <div class="menu-img rounded-top-4">
+                                        <img src="img/menu-img6.png" alt="BBQ Pizza">
                                     </div>
-                                    <div
-                                        class="menu-content p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                    <div class="menu-content p-4 flex-grow-1 d-flex flex-column justify-content-between">
                                         <div>
-                                            <h5 class="text-white">Delicious Pizza</h5>
-                                            <p class="text-white">
-                                                Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit,
-                                                magnam voluptatem repellendus sed eaque
-                                            </p>
+                                            <h5 class="text-white fw-bold">BBQ Pizza</h5>
+                                            <p class="text-white-50">Smoky BBQ sauce base topped with grilled chicken, onions, and bell peppers on a hand-tossed crust.</p>
                                         </div>
-                                        <ul
-                                            class="list-unstyled d-flex justify-content-between align-items-center mb-0 mt-3">
-                                            <li class="text-white">$15</li>
-                                            <li>
-                                                <button class="btn btn-warning rounded-circle">
-                                                    <i class="bi bi-cart-fill"></i>
-                                            </li>
-                                        </ul>
+                                        <div class="d-flex justify-content-between align-items-center mt-3">
+                                            <span class="text-warning fs-5 fw-bold">$15</span>
+                                            <button class="btn-cart" aria-label="Add to cart">
+                                                <i class="bi bi-cart-fill"></i>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -676,58 +515,44 @@
 
                     <!-- Pasta -->
                     <div class="tab-pane fade" id="pasta" role="tabpanel" aria-labelledby="pasta-tab" tabindex="0">
-                        <div class="row">
+                        <div class="row g-4">
 
-                            <div class="col-12 col-sm-6 col-lg-4 mb-4">
-                                <div class="menu-item bg-dark rounded rounded-4 h-100 d-flex flex-column">
-                                    <div
-                                        class="menu-img bg-light rounded-top text-center d-flex justify-content-center align-items-center pt-3">
-                                        <img src="img/menu-img4.png" alt="Pasta" width="200px" />
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="menu-item bg-dark rounded-4 h-100 d-flex flex-column">
+                                    <div class="menu-img rounded-top-4">
+                                        <img src="img/menu-img4.png" alt="Delicious Pasta">
                                     </div>
-                                    <div
-                                        class="menu-content p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                    <div class="menu-content p-4 flex-grow-1 d-flex flex-column justify-content-between">
                                         <div>
-                                            <h5 class="text-white">Delicious Pasta</h5>
-                                            <p class="text-white">
-                                                Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit,
-                                                magnam voluptatem repellendus sed eaque
-                                            </p>
+                                            <h5 class="text-white fw-bold">Delicious Pasta</h5>
+                                            <p class="text-white-50">Creamy Alfredo pasta with herbs and a touch of garlic, served al dente just the way Italians love it.</p>
                                         </div>
-                                        <ul
-                                            class="list-unstyled d-flex justify-content-between align-items-center mb-0 mt-3">
-                                            <li class="text-white">$18</li>
-                                            <li>
-                                                <button class="btn btn-warning rounded-circle">
-                                                    <i class="bi bi-cart-fill"></i>
-                                            </li>
-                                        </ul>
+                                        <div class="d-flex justify-content-between align-items-center mt-3">
+                                            <span class="text-warning fs-5 fw-bold">$18</span>
+                                            <button class="btn-cart" aria-label="Add to cart">
+                                                <i class="bi bi-cart-fill"></i>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-12 col-sm-6 col-lg-4 mb-4">
-                                <div class="menu-item bg-dark rounded rounded-4 h-100 d-flex flex-column">
-                                    <div
-                                        class="menu-img bg-light rounded-top text-center d-flex justify-content-center align-items-center pt-3">
-                                        <img src="img/menu-img9.png" alt="pasta" width="200px" />
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="menu-item bg-dark rounded-4 h-100 d-flex flex-column">
+                                    <div class="menu-img rounded-top-4">
+                                        <img src="img/menu-img9.png" alt="Penne Pasta">
                                     </div>
-                                    <div
-                                        class="menu-content p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                    <div class="menu-content p-4 flex-grow-1 d-flex flex-column justify-content-between">
                                         <div>
-                                            <h5 class="text-white">Delicious Pasta</h5>
-                                            <p class="text-white">
-                                                Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit,
-                                                magnam voluptatem repellendus sed eaque
-                                            </p>
+                                            <h5 class="text-white fw-bold">Penne Pasta</h5>
+                                            <p class="text-white-50">Penne pasta tossed in a rich tomato arrabbiata sauce with fresh basil, olives, and Parmesan cheese.</p>
                                         </div>
-                                        <ul
-                                            class="list-unstyled d-flex justify-content-between align-items-center mb-0 mt-3">
-                                            <li class="text-white">$10</li>
-                                            <li>
-                                                <button class="btn btn-warning rounded-circle">
-                                                    <i class="bi bi-cart-fill"></i>
-                                            </li>
-                                        </ul>
+                                        <div class="d-flex justify-content-between align-items-center mt-3">
+                                            <span class="text-warning fs-5 fw-bold">$10</span>
+                                            <button class="btn-cart" aria-label="Add to cart">
+                                                <i class="bi bi-cart-fill"></i>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -737,31 +562,24 @@
 
                     <!-- Fries -->
                     <div class="tab-pane fade" id="fries" role="tabpanel" aria-labelledby="fries-tab" tabindex="0">
-                        <div class="row">
+                        <div class="row g-4">
 
-                            <div class="col-12 col-sm-6 col-lg-4 mb-4">
-                                <div class="menu-item bg-dark rounded rounded-4 h-100 d-flex flex-column">
-                                    <div
-                                        class="menu-img bg-light rounded-top text-center d-flex justify-content-center align-items-center pt-3">
-                                        <img src="img/menu-img5.png" alt="fries" width="200px" />
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="menu-item bg-dark rounded-4 h-100 d-flex flex-column">
+                                    <div class="menu-img rounded-top-4">
+                                        <img src="img/menu-img5.png" alt="French Fries">
                                     </div>
-                                    <div
-                                        class="menu-content p-4 flex-grow-1 d-flex flex-column justify-content-between">
+                                    <div class="menu-content p-4 flex-grow-1 d-flex flex-column justify-content-between">
                                         <div>
-                                            <h5 class="text-white">French Fries</h5>
-                                            <p class="text-white">
-                                                Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit,
-                                                magnam voluptatem repellendus sed eaque
-                                            </p>
+                                            <h5 class="text-white fw-bold">French Fries</h5>
+                                            <p class="text-white-50">Golden, crispy fries seasoned with sea salt and herbs. The perfect snack or side for any meal.</p>
                                         </div>
-                                        <ul
-                                            class="list-unstyled d-flex justify-content-between align-items-center mb-0 mt-3">
-                                            <li class="text-white">$10</li>
-                                            <li>
-                                                <button class="btn btn-warning rounded-circle">
-                                                    <i class="bi bi-cart-fill"></i>
-                                            </li>
-                                        </ul>
+                                        <div class="d-flex justify-content-between align-items-center mt-3">
+                                            <span class="text-warning fs-5 fw-bold">$10</span>
+                                            <button class="btn-cart" aria-label="Add to cart">
+                                                <i class="bi bi-cart-fill"></i>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -771,258 +589,353 @@
 
                 </div>
 
-                <div class="text-center">
-                    <a href="javascript:void(0)" class="btn text-decoration-none px-4 py-2 rounded-pill text-white">View
-                        More
-                    </a>
+                <div class="text-center mt-5">
+                    <a href="#menu-section" class="btn-primary-custom">View Full Menu</a>
                 </div>
             </div>
         </section>
 
 
-        <!-- ABOUTS -->
-
-        <section class="abouts bg-dark">
+        <!-- ABOUT -->
+        <section class="about-section bg-dark py-5" id="about">
             <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-12 col-md-6 order-1 order-md-0">
-                        <div class="about-img mt-5">
-                            <img src="img/about-img.png" class="py-5" title="about-img" width="100%" alt="about-img">
-                        </div>
+                <div class="row align-items-center g-5">
+                    <div class="col-12 col-md-6 text-center">
+                        <img src="img/about-img.png" class="about-img-main" title="About Feane" alt="About Feane restaurant">
                     </div>
 
                     <div class="col-12 col-md-6">
-                        <div class="about-contant p-5">
-                            <h2 class="text-white fs-1">We Are Feane</h2>
-                            <p class="text-white">There are many variations of passages of Lorem Ipsum available, but
-                                the majority have
-                                suffered alteration in some form, by injected humour, or randomised words which don't
-                                look even slightly believable. If you are going to use a passage of Lorem Ipsum, you
-                                need to be sure there isn't anything embarrassing hidden in the middle of text. All</p>
-                            <a href="javascript:void(0)"
-                                class="btn text-decoration-none px-4 py-2 rounded-pill text-white">Read More
-                            </a>
+                        <div class="about-content p-md-4">
+                            <p class="section-label">WHO WE ARE</p>
+                            <h2 class="text-white fs-1 mb-4">We Are <span class="text-warning">Feane</span></h2>
+                            <p class="text-white-50 mb-3">At Feane, we believe great food brings people together. Founded with a passion for flavor and quality, our restaurant has been serving the finest fast food using only the freshest, locally sourced ingredients.</p>
+                            <p class="text-white-50 mb-4">Every dish is crafted with care, from our hand-pressed burgers to our stone-baked pizzas. We don't just serve food — we create experiences that keep you coming back for more.</p>
+                            <div class="d-flex gap-3 flex-wrap mb-4">
+                                <div class="stat-box">
+                                    <span class="stat-number">150+</span>
+                                    <span class="stat-label">Menu Items</span>
+                                </div>
+                                <div class="stat-box">
+                                    <span class="stat-number">10K+</span>
+                                    <span class="stat-label">Happy Customers</span>
+                                </div>
+                                <div class="stat-box">
+                                    <span class="stat-number">12+</span>
+                                    <span class="stat-label">Years Experience</span>
+                                </div>
+                            </div>
+                            <a href="#contact" class="btn-primary-custom">Book a Table</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- CONTACT -->
-
-        <section class="contact py-5">
+        <!-- CONTACT / BOOK TABLE -->
+        <section class="contact-section py-5" id="contact">
             <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-12 col-md-6">  
-                        <div class="contact-item">
-                            <form>
-                                <h2 class="py-3 fs-1">Book A Table</h2>
-                                <input placeholder="Your Name"
-                                    class="form-control border border-dark border-opacity-50 mb-4 py-2" type="text">
-                                <input placeholder="Phone Number"
-                                    class="form-control border border-dark border-opacity-50 mb-4 py-2" type="text">
-                                <input placeholder="Your Email"
-                                    class="form-control border border-dark border-opacity-50 mb-4 py-2" type="email">
-                                <select class="form-select mb-5 py-2">
-                                    <option>How many persons?</option>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
+                <div class="row mb-4">
+                    <div class="col text-center">
+                        <p class="section-label">RESERVE YOUR SPOT</p>
+                        <h2 class="section-title fw-bold">Book A Table</h2>
+                        <p class="section-desc">Reserve your table and enjoy a memorable dining experience.</p>
+                    </div>
+                </div>
+                <div class="row align-items-start g-5">
+                    <div class="col-12 col-md-6">
+                        <form class="booking-form" id="bookingForm" novalidate>
+                            <div class="mb-3">
+                                <input placeholder="Your Full Name" class="form-control booking-input" type="text" id="bookName" required>
+                            </div>
+                            <div class="mb-3">
+                                <input placeholder="Phone Number" class="form-control booking-input" type="tel" id="bookPhone">
+                            </div>
+                            <div class="mb-3">
+                                <input placeholder="Your Email Address" class="form-control booking-input" type="email" id="bookEmail" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="date" class="form-control booking-input" id="bookDate">
+                            </div>
+                            <div class="mb-4">
+                                <select class="form-select booking-input" id="bookPersons">
+                                    <option value="" disabled selected>How many persons?</option>
+                                    <option value="1">1 Person</option>
+                                    <option value="2">2 Persons</option>
+                                    <option value="3">3 Persons</option>
+                                    <option value="4">4 Persons</option>
+                                    <option value="5">5+ Persons</option>
                                 </select>
-                                <button class="btn btn-warning rounded-pill px-4 text-white py-2">BOOK NOW</button>
-                            </form>
-                        </div>
+                            </div>
+                            <button type="submit" class="btn-primary-custom w-100 py-3">BOOK NOW &nbsp;<i class="bi bi-calendar-check-fill"></i></button>
+                        </form>
                     </div>
 
-                    <div class="col-12 col-md-6 mt-4">
+                    <div class="col-12 col-md-6">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d238133.18800900166!2d72.65747318239129!3d21.159120355102836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e59411d1563%3A0xfe4558290938b042!2sSurat%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1745642119402!5m2!1sen!2sin"
-                            width="100%" height="300" class="rounded"></iframe>
+                            width="100%" height="380" class="rounded-4 map-embed" style="border:0;" loading="lazy" allowfullscreen title="Feane Restaurant Location"></iframe>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- FEEDBACK -->
-
-        <section class="feedbacks">
+        <!-- TESTIMONIALS / FEEDBACK -->
+        <section class="feedback-section py-5">
             <div class="container">
-                <div class="feedback-title text-center">
-                    <h2 class="fs-1 fw-bold">What Says Our Customers</h2>
+                <div class="text-center mb-5">
+                    <p class="section-label">TESTIMONIALS</p>
+                    <h2 class="section-title fw-bold">What Our Customers Say</h2>
                 </div>
-            </div>
 
-            <!-- slide 1 -->
-            <div class="feedback-inner mt-5">
-                <div class="carousel slide position-relative" id="testimonialSlider" data-bs-ride="carousel">
+                <div id="testimonialSlider" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-12 col-md-6">
-                                        <div class="feedback-content bg-dark p-4 rounded">
-                                            <p class="text-white">This was a really nice place , we enjoyed a lot here ,
-                                                and blah
-                                                blah the smell of the
-                                                dishes are amazing and the taste is nice and much better then
-                                                others.nice servants ,
-                                                jay ho mahakal ki.</p>
-                                            <h4 class="text-white">Moana Michell</h4>
-                                            <p class="text-white mb-0">magna aliqua</p>
-                                        </div>
-                                        <div class="feedback-img d-inline-block position-relative">
-                                            <img src="img/moana-feedback.jpg" width="110"
-                                                class="border border-warning rounded-circle border-5 mt-5"
-                                                title="moana-feedback" alt="moana-feedback">
-                                        </div>
-                                    </div>
 
-                                    <div class="col-12 col-md-6 mt-3 mt-md-0">
-                                        <div class="feedback-content bg-dark p-4 rounded">
-                                            <p class="text-white">This was a really nice place , we enjoyed a lot here ,
-                                                and blah
-                                                blah the smell of the
-                                                dishes are amazing and the taste is nice and much better then
-                                                others.nice servants ,
-                                                jay ho mahakal ki.</p>
-                                            <h4 class="text-white">Mike Hamell</h4>
-                                            <p class="text-white mb-0">magna aliqua</p>
+                        <!-- Slide 1 -->
+                        <div class="carousel-item active">
+                            <div class="row g-4 justify-content-center">
+                                <div class="col-12 col-md-6">
+                                    <div class="testimonial-card bg-dark p-4 rounded-4">
+                                        <div class="stars mb-3">
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
                                         </div>
-                                        <div class="feedback-img d-inline-block position-relative">
-                                            <img src="img/mike-feedback.jpg" width="110"
-                                                class="border border-warning rounded-circle border-5 mt-5"
-                                                title="mike-feedback" alt="mike-feedback">
+                                        <p class="text-white-50 mb-4">"This was a really nice place — we enjoyed a lot here! The smell of the dishes is amazing and the taste is so much better than anywhere else. Incredible service and a wonderful atmosphere!"</p>
+                                        <div class="d-flex align-items-center">
+                                            <div class="testimonial-img-wrap">
+                                                <img src="img/moana-feedback.jpg" width="60" height="60" class="border border-warning rounded-circle border-3" title="Moana Michell" alt="Moana Michell">
+                                            </div>
+                                            <div class="ms-3">
+                                                <h5 class="text-white mb-0">Moana Michell</h5>
+                                                <p class="text-warning mb-0 small">Food Blogger</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
 
+                                <div class="col-12 col-md-6">
+                                    <div class="testimonial-card bg-dark p-4 rounded-4">
+                                        <div class="stars mb-3">
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-half text-warning"></i>
+                                        </div>
+                                        <p class="text-white-50 mb-4">"The burgers are absolutely top-notch! Best fast food I've had in years. The fries are perfectly crispy and the service is lightning fast. Definitely my go-to spot for a quick, satisfying meal!"</p>
+                                        <div class="d-flex align-items-center">
+                                            <div class="testimonial-img-wrap">
+                                                <img src="img/mike-feedback.jpg" width="60" height="60" class="border border-warning rounded-circle border-3" title="Mike Hamell" alt="Mike Hamell">
+                                            </div>
+                                            <div class="ms-3">
+                                                <h5 class="text-white mb-0">Mike Hamell</h5>
+                                                <p class="text-warning mb-0 small">Regular Customer</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
+                        <!-- Slide 2 -->
                         <div class="carousel-item">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-12 col-md-6">
-                                        <div class="feedback-content bg-dark p-4 rounded">
-                                            <p class="text-white">This was a really nice place , we enjoyed a lot here ,
-                                                and blah
-                                                blah the smell of the
-                                                dishes are amazing and the taste is nice and much better then
-                                                others.nice servants ,
-                                                jay ho mahakal ki.</p>
-                                            <h4 class="text-white">Moana Michell</h4>
-                                            <p class="text-white mb-0">magna aliqua</p>
+                            <div class="row g-4 justify-content-center">
+                                <div class="col-12 col-md-6">
+                                    <div class="testimonial-card bg-dark p-4 rounded-4">
+                                        <div class="stars mb-3">
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
                                         </div>
-                                        <div class="feedback-img d-inline-block position-relative">
-                                            <img src="img/moana-feedback.jpg" width="110"
-                                                class="border border-warning rounded-circle border-5 mt-5"
-                                                title="moana-feedback" alt="moana-feedback">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-12 col-md-6 mt-3 mt-md-0">
-                                        <div class="feedback-content bg-dark p-4 rounded">
-                                            <p class="text-white">This was a really nice place , we enjoyed a lot here ,
-                                                and blah
-                                                blah the smell of the
-                                                dishes are amazing and the taste is nice and much better then
-                                                others.nice servants ,
-                                                jay ho mahakal ki.</p>
-                                            <h4 class="text-white">Mike Hamell</h4>
-                                            <p class="text-white mb-0">magna aliqua</p>
-                                        </div>
-                                        <div class="feedback-img d-inline-block position-relative">
-                                            <img src="img/mike-feedback.jpg" width="110"
-                                                class="border border-warning rounded-circle border-5 mt-5"
-                                                title="mike-feedback" alt="mike-feedback">
+                                        <p class="text-white-50 mb-4">"Feane is the definition of perfection when it comes to fast food. The pizza is something else entirely! Crispy crust, fresh toppings, and incredible flavor in every single bite. A must-visit!"</p>
+                                        <div class="d-flex align-items-center">
+                                            <div class="testimonial-img-wrap">
+                                                <img src="img/moana-feedback.jpg" width="60" height="60" class="border border-warning rounded-circle border-3" title="Moana Michell" alt="Moana Michell">
+                                            </div>
+                                            <div class="ms-3">
+                                                <h5 class="text-white mb-0">Moana Michell</h5>
+                                                <p class="text-warning mb-0 small">Food Blogger</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
 
+                                <div class="col-12 col-md-6">
+                                    <div class="testimonial-card bg-dark p-4 rounded-4">
+                                        <div class="stars mb-3">
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                        </div>
+                                        <p class="text-white-50 mb-4">"I've tried many restaurants but Feane stands out for its consistency and quality. The pasta dishes are restaurant-quality! Generous portions, affordable prices, and a cozy atmosphere. Highly recommended!"</p>
+                                        <div class="d-flex align-items-center">
+                                            <div class="testimonial-img-wrap">
+                                                <img src="img/mike-feedback.jpg" width="60" height="60" class="border border-warning rounded-circle border-3" title="Mike Hamell" alt="Mike Hamell">
+                                            </div>
+                                            <div class="ms-3">
+                                                <h5 class="text-white mb-0">Mike Hamell</h5>
+                                                <p class="text-warning mb-0 small">Regular Customer</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
                     </div>
+
+                    <!-- Controls -->
+                    <div class="text-center mt-4">
+                        <button class="btn-carousel-nav me-2" data-bs-target="#testimonialSlider" data-bs-slide="prev" aria-label="Previous testimonial">
+                            <i class="bi bi-chevron-left"></i>
+                        </button>
+                        <button class="btn-carousel-nav" data-bs-target="#testimonialSlider" data-bs-slide="next" aria-label="Next testimonial">
+                            <i class="bi bi-chevron-right"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
-
-            <div class="container">
-                <div class="feed-btn text-center mt-5">
-                    <button class="btn btn-warning rounded-circle me-2" data-bs-target="#testimonialSlider"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon bg-transparent"></span>
-                    </button>
-                    <button class="btn btn-warning rounded-circle" data-bs-target="#testimonialSlider"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon bg-transparent"></span>
-                    </button>
-                </div>
-            </div>
-            </div>
-
         </section>
+
     </main>
 
-    <!-- footer -->
-
-    <footer class="bg-dark text-white pt-5 pb-3 mt-5">
-        <div class="container text-center text-md-start">
-            <div class="row">
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row g-4 text-center text-md-start">
 
                 <!-- Contact Us -->
-                <div class="footer-contact col-md-4 mb-4 text-center">
-                    <h5 class="mb-4 fs-2">Contact Us</h5>
-
-                    <a href="javascript:void(0)" class="text-decoration-none text-white">
-                        <p class="bloom"><i class="bi bi-geo-alt-fill me-2"></i>Location</p>
+                <div class="col-md-4">
+                    <h5 class="footer-heading mb-4">Contact Us</h5>
+                    <a href="#" class="footer-link">
+                        <i class="bi bi-geo-alt-fill me-2 text-warning"></i>123 Food Street, Surat, Gujarat
                     </a>
-
-                    <a href="javascript:void(0)" class="text-white text-decoration-none">
-                        <p class="bloom"><i class="bi bi-telephone-fill me-2"></i>Call +01 12 34567890</p>
+                    <a href="tel:+011234567890" class="footer-link">
+                        <i class="bi bi-telephone-fill me-2 text-warning"></i>+01 12 34567890
                     </a>
-
-                    <a href="javascript:void(0)" class="text-white text-decoration-none">
-                        <p class="bloom"><i class="bi bi-envelope-fill me-2"></i>demo@gmail.com</p>
+                    <a href="mailto:demo@gmail.com" class="footer-link">
+                        <i class="bi bi-envelope-fill me-2 text-warning"></i>demo@gmail.com
                     </a>
-
                 </div>
 
                 <!-- Feane Info -->
-                <div class="footer-add col-md-4 mb-4 text-center">
-                    <h5 class="mb-4 fs-2">Feane</h5>
-                    <p>
-                        Necessary, making this the first true generator on the Internet. It uses a dictionary of over
-                        200 Latin words, combined with
-                    </p>
-                    <div>
-                        <a href="#" class="text-white me-3 fs-4"><i class="bloom bi bi-facebook"></i></a>
-                        <a href="#" class="text-white me-3 fs-4"><i class="bloom bi bi-twitter"></i></a>
-                        <a href="#" class="text-white me-3 fs-4"><i class="bloom bi bi-linkedin"></i></a>
-                        <a href="#" class="text-white me-3 fs-4"><i class="bloom bi bi-instagram"></i></a>
-                        <a href="#" class="text-white fs-4"><i class="bloom bi bi-pinterest"></i></a>
+                <div class="col-md-4 text-center">
+                    <h5 class="footer-heading mb-4">Feane</h5>
+                    <p class="text-white-50 mb-4">Your favorite fast food destination. We serve happiness on every plate with the freshest ingredients and bold flavors that keep you coming back.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-icon" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="social-icon" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="social-icon" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-icon" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
                     </div>
                 </div>
 
                 <!-- Opening Hours -->
-                <div class="footer-time col-md-4 mb-4 text-center">
-                    <h5 class="mb-4 fs-2">Opening Hours</h5>
-                    <p>Everyday</p>
-                    <p>10.00 Am - 10.00 Pm</p>
+                <div class="col-md-4 text-center text-md-end">
+                    <h5 class="footer-heading mb-4">Opening Hours</h5>
+                    <div class="hours-list">
+                        <div class="hours-item">
+                            <span class="text-white-50">Monday - Friday</span>
+                            <span class="text-warning">10:00 AM – 10:00 PM</span>
+                        </div>
+                        <div class="hours-item">
+                            <span class="text-white-50">Saturday - Sunday</span>
+                            <span class="text-warning">09:00 AM – 11:00 PM</span>
+                        </div>
+                    </div>
                 </div>
+
             </div>
 
+            <hr class="footer-divider">
+
             <!-- Footer Bottom -->
-            <div class="footer-copyright text-center mt-4">
-                <p class="mb-1">© 2025 All Rights Reserved By Free Html Templates</p>
-                <p>© Distributed By ThemeWagon</p>
+            <div class="text-center">
+                <p class="text-white-50 mb-0">© 2025 Feane Restaurant. All Rights Reserved. Made with <span class="text-warning">♥</span> for great food lovers.</p>
             </div>
         </div>
     </footer>
 
-
-
     <script src="js/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('mainNavbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+        });
+
+        // Smooth scroll for all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    const offset = 80;
+                    const top = target.getBoundingClientRect().top + window.scrollY - offset;
+                    window.scrollTo({ top, behavior: 'smooth' });
+
+                    // Close mobile menu if open
+                    const menu = document.getElementById('menu');
+                    if (menu.classList.contains('show')) {
+                        const toggler = document.querySelector('.navbar-toggler');
+                        toggler.click();
+                    }
+                }
+            });
+        });
+
+        // Active nav link highlighting on scroll
+        const sections = document.querySelectorAll('section[id], #home');
+        const navLinks = document.querySelectorAll('.nav-item-link');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (window.scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+            navLinks.forEach(link => {
+                link.classList.remove('active-nav');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active-nav');
+                }
+            });
+        });
+
+        // Book table form
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('bookName').value.trim();
+            if (name) {
+                alert(`Thank you, ${name}! Your table has been booked. We'll confirm via email shortly.`);
+                this.reset();
+            }
+        });
+
+        // Menu item cart button animation
+        document.querySelectorAll('.btn-cart').forEach(btn => {
+            btn.addEventListener('click', function() {
+                this.innerHTML = '<i class="bi bi-check-lg"></i>';
+                this.style.backgroundColor = '#28a745';
+                setTimeout(() => {
+                    this.innerHTML = '<i class="bi bi-cart-fill"></i>';
+                    this.style.backgroundColor = '';
+                }, 1500);
+            });
+        });
+    </script>
 </body>
 
 </html>
